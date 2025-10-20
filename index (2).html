@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCOS Smart Living</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f0f8ff; color: #333; }
+        header { background-color: #E8A2A2; color: white; padding: 20px; text-align: center; } /* Rose Quartz */
+        nav { background-color: #92A8D1; padding: 10px; } /* Serenity */
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        section { padding: 20px; margin: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        button { background-color: #E8A2A2; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px; } /* Rose Quartz */
+        button:hover { background-color: #D4A5A5; } /* Lighter Rose Quartz */
+        .swap { display: none; }
+        .plate { width: 200px; height: 200px; border-radius: 50%; background-color: #f0f8ff; margin: 20px auto; position: relative; }
+        .plate div { position: absolute; border-radius: 50%; }
+        .veggie { background-color: green; width: 100px; height: 100px; top: 0; left: 50px; }
+        .protein { background-color: red; width: 50px; height: 50px; top: 75px; left: 25px; }
+        .carb { background-color: yellow; width: 50px; height: 50px; top: 75px; left: 125px; }
+        .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; max-width: 300px; margin: 20px auto; }
+        .calendar div { padding: 10px; border: 1px solid #ccc; text-align: center; cursor: pointer; }
+        .calendar .selected { background-color: #E8A2A2; color: white; } /* Rose Quartz */
+        .step { margin-bottom: 20px; padding: 10px; border-left: 5px solid #92A8D1; background-color: #f9f9f9; } /* Serenity */
+        .step h3 { margin-top: 0; color: #E8A2A2; } /* Rose Quartz */
+        footer { background-color: #92A8D1; color: white; text-align: center; padding: 10px; margin-top: 20px; } /* Serenity */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PCOS Smart Living</h1>
+        <p>Aplikasi Edukatif untuk Remaja dan Wanita Muda</p>
+    </header>
+    <nav>
+        <a href="#edukasi">Pelajari PCOS</a>
+        <a href="#gejala">Waspada Gejala</a>
+        <a href="#eating">Smart Eating Lab</a>
+        <a href="#diet">Panduan Diet PCOS</a>
+    </nav>
+
+    <section id="edukasi">
+        <h2>Edukasi Interaktif: Apa Itu PCOS?</h2>
+        <p>Klik tombol di bawah untuk melihat penjelasan lengkap tentang PCOS dan hubungan Junk Food & PCOS.</p>
+        <button onclick="showInfo()">Mulai Edukasi</button>
+        <div id="info" style="display: none;">
+            <p><strong>Narasi: Apa Itu PCOS?</strong></p>
+            <p>Sindrom Polikistik Ovarium atau Polycystic Ovarian Syndrome (PCOS) adalah penyakit ketika ovum atau sel telur pada perempuan tidak berkembang secara normal karena ketidakseimbangan hormon. Ovarium menghasilkan hormon androgen yang berlebihan mengakibatkan ovarium memproduksi banyak kantong-kantong berisi cairan atau kista. Kondisi ini menyebabkan sel-sel telur tidak bisa berkembang dengan sempurna dan gagal dilepaskan secara teratur.</p>
+            
+            <h3>Langkah Hubungan Junk Food & PCOS</h3>
+            
+            <div class="step">
+                <h3>1. Junk Food Memicu Lonjakan Gula Darah</h3>
+                <p><strong>Mengapa:</strong> Junk food didominasi oleh karbohidrat olahan dan gula tambahan (indeks glikemik tinggi) serta sangat rendah serat.</p>
+                <p><strong>Mekanisme:</strong></p>
+                <ul>
+                    <li>a. Pencernaan Kilat: Karbohidrat sederhana dicerna hampir instan.</li>
+                    <li>b. Glukosa Membanjiri Darah: Tanpa serat yang bertindak sebagai rem, glukosa dalam jumlah besar langsung diserap, menyebabkan kadar Gula Darah Melonjak Drastis.</li>
+                    <li>c. Respon Darurat Insulin: Pankreas dipaksa memproduksi dan melepaskan Insulin dalam jumlah sangat besar (Hiperinsulinemia) untuk segera membersihkan glukosa dari darah.</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>2. Gula Darah Tinggi Memicu Resistensi Insulin</h3>
+                <p>Kadar insulin yang kronis dan berlebihan akibat lonjakan gula darah berulang adalah penyebab utama Resistensi Insulin.</p>
+                <p><strong>Mengapa?:</strong> Paparan insulin yang terus-menerus dan ekstrem membuat sel-sel tubuh menjadi tumpul atau kebal terhadap sinyal insulin.</p>
+                <p><strong>Mekanisme:</strong></p>
+                <ul>
+                    <li>a. Sel Menjadi Jenuh: Sel-sel otot dan lemak memiliki reseptor insulin. Karena paparan insulin yang terlalu tinggi dan sering (hiperinsulinemia), reseptor seluler ini menjadi jenuh dan mulai menurunkan sensitivitasnya.</li>
+                    <li>b. Kegagalan Komunikasi: Insulin gagal "membuka pintu" sel secara efektif. Glukosa tidak dapat masuk dan tetap menumpuk di aliran darah.</li>
+                    <li>c. Lingkaran Setan: Tubuh merespon dengan memproduksi lebih banyak insulin lagi (memperburuk hiperinsulinemia), karena gula darah masih tinggi. Ini secara permanen menciptakan kondisi Resistensi Insulin.</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>3. Resistensi Insulin Memicu Gangguan Hormon</h3>
+                <p>Resistensi insulin mengubah insulin menjadi "hormon pengganggu" yang secara langsung menyebabkan ketidakseimbangan hormon seks.</p>
+                <p><strong>Mekanisme:</strong></p>
+                <ul>
+                    <li>a. Stimulasi Ovarium: Kadar Insulin Bebas yang sangat tinggi bertindak sebagai sinyal pertumbuhan yang abnormal pada ovarium. Insulin merangsang ovarium untuk memproduksi berlebihan hormon pria (Androgen, seperti Testosteron).</li>
+                    <li>b. Menghambat SHBG: Insulin yang tinggi menekan produksi protein hati yang disebut SHBG (Sex Hormone-Binding Globulin). SHBG berfungsi mengikat Androgen agar tidak aktif.</li>
+                    <li>c. Peningkatan Androgen Aktif: Dengan SHBG yang rendah, jumlah Androgen Bebas dan aktif dalam darah melonjak.</li>
+                </ul>
+            </div>
+            
+            <div class="step">
+                <h3>4. Gangguan Hormon Berdampak ke PCOS</h3>
+                <p>Kelebihan Androgen aktif, yang dipicu oleh resistensi insulin akibat junk food, adalah faktor utama yang mendorong munculnya atau memburuknya gejala PCOS.</p>
+                <p><strong>Mekanisme:</strong></p>
+                <ul>
+                    <li>a. Gangguan Ovulasi: Androgen yang tinggi mengganggu perkembangan dan pematangan normal folikel di ovarium. Hal ini mencegah pelepasan sel telur secara teratur (ovulasi).</li>
+                    <li>b. Siklus Menstruasi: Terganggunya ovulasi menyebabkan siklus menstruasi tidak teratur (oligomenore) atau terhenti (amenore), salah satu kriteria diagnostik PCOS.</li>
+                    <li>c. Manifestasi Fisik: Kelebihan Androgen aktif menyebabkan gejala fisik khas PCOS seperti hirsutisme (pertumbuhan rambut berlebih pada tubuh) dan jerawat hormonal yang parah.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="gejala">
+        <h2>Waspada Gejala</h2>
+        <h3>Pemeriksa Gejala</h3>
+        <form id="symptomForm">
+            <label><input type="checkbox" name="symptom" value="jerawat"> Jerawat Berlebih</label><br>
+            <label><input type="checkbox" name="symptom" value="berat"> Berat Badan Naik</label><br>
+            <label><input type="checkbox" name="symptom" value="haid"> Haid Tidak Teratur</label><br>
+            <label><input type="checkbox" name="symptom" value="rambut"> Masalah Rambut</label><br>
+            <button type="button" onclick="checkSymptoms()">Periksa Risiko</button>
+        </form>
+        <p id="riskResult"></p>
+    </section>
+
+    <section id="eating">
+        <h2>Smart Eating Lab</h2>
+        <h3>Tukar Menu Favoritmu</h3>
+        <select id="junkFood">
+            <option value="">Pilih Junk Food</option>
+            <option value="burger">Burger</option>
+            <option value="fries">Kentang Goreng</option>
+            <option value="soda">Soda</option>
+            <option value="pizza">Pizza</option>
+            <option value="donat">Donat</option>
+        </select>
+        <button onclick="swapMenu()">Tukar ke Sehat</button>
+        <div id="swap" class="swap">
+            <p id="swapResult"></p>
+        </div>
+        <h3>Kalkulator Porsi Ideal</h3>
+        <input type="text" id="foodInput" placeholder="Masukkan makanan (mis: nasi, ayam)">
+        <button onclick="calculatePortion()">Hitung Porsi</button>
+        <div class="plate" id="plate" style="display: none;">
+            <div class="veggie"></div>
+            <div class="protein"></div>
+            <div class="carb"></div>
+        </div>
+        <h3>Pelacak Hidrasi & Jadwal Makan</h3>
+        <button onclick="addWater()">Tambah 1 Gelas Air</button>
+        <p id="waterCount">Air hari ini: 0 gelas</p>
+        <button onclick="setMealReminder()">Atur Jadwal Makan</button>
+        <p id="reminder">Jadwal belum diatur.</p>
+    </section>
+
+    <section id="diet">
+        <h2>Panduan Diet PCOS</h2>
+        <p>Tonton video panduan diet untuk PCOS dari TikTok dengan mengklik tombol di bawah.</p>
+        <button onclick="window.open('https://vt.tiktok.com/ZSUbqKUyW/', '_blank')">Tonton Video Panduan Diet PCOS</button>
+    </section>
+
+    <footer>
+        <p>Tilka Ananda (P21124063), Nutrition Student, Tadulako University</p>
+    </footer>
+
+    <script>
+        let water = 0;
+
+        function showInfo() {
+            document.getElementById('info').style.display = 'block';
+        }
+
+        function checkSymptoms() {
+            const checked = document.querySelectorAll('input[name="symptom"]:checked').length;
+            const result = document.getElementById('riskResult');
+            if (checked >= 2) {
+                result.textContent = 'Risiko tinggi. Konsultasikan dokter.';
+            } else {
+                result.textContent = 'Risiko rendah. Tetap jaga pola makan.';
+            }
+        }
+
+        function swapMenu() {
+            const food = document.getElementById('junkFood').value;
+            const result = document.getElementById('swapResult');
+            document.getElementById('swap').style.display = 'block';
+            if (food === 'burger') {
+                result.textContent = 'Burger (500 kal, 50g gula) → Sandwich Sehat (300 kal, 10g gula)';
+            } else if (food === 'fries') {
+                result.textContent = 'Kentang Goreng (400 kal, 20g gula) → Buah-buahan (100 kal, 5g gula)';
+            } else if (food === 'soda') {
+                result.textContent = 'Soda (150 kal, 40g gula) → Air Putih (0 kal, 0g gula)';
+            } else if (food === 'pizza') {
+                result.textContent = 'Pizza (600 kal, 30g gula) → Salad Sayur (200 kal, 5g gula)';
+            } else if (food === 'donat') {
+                result.textContent = 'Donat (300 kal, 25g gula) → Yogurt Yunani (150 kal, 10g gula)';
+            }
+        }
+
+        function calculatePortion() {
+            const food = document.getElementById('foodInput').value;
+            if (food) {
+                document.getElementById('plate').style.display = 'block';
+                alert(`Porsi ideal untuk ${food}: 1/2 Sayur, 1/4 Protein, 1/4 Karbohidrat.`);
+            }
+        }
+
+        function addWater() {
+            water++;
+            document.getElementById('waterCount').textContent = `Air hari ini: ${water} gelas`;
+            if (water >= 8) {
+                alert('Target tercapai! Bagus!');
+            }
+        }
+
+        function setMealReminder() {
+            document.getElementById('reminder').textContent = 'Jadwal: 3x makan + 2x snack sehat. Notifikasi diatur.';
+            setTimeout(() => alert('Waktunya makan siang!'), 5000);
+        }
+    </script>
+</body>
+</html>
